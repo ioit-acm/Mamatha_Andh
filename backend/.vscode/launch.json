@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-NgoApplication<ngo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.eyefund.ngo.NgoApplication",
+            "projectName": "ngo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
