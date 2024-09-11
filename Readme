@@ -1,0 +1,43 @@
+This project is designed to facilitate different types of donations for an NGO, including fund donations, clothing 
+donations, and stationery donations. The application consists of a user-friendly frontend built using React, and a 
+robust backend developed with Spring Boot. The system includes a donation form that collects user contact details and 
+donation information. An admin section is available to review, manage, and remove donations.
+
+Key Features:
+Donation Types:
+
+1. Users can donate funds, clothes, or stationery.
+   Each donation type has a specific form to capture relevant details.
+   Contact Details Form: Donors fill out a form with their contact information when making a donation.
+
+2. Admin Section:
+   The admin login portal allows for a secure login.
+   Admins can review all incoming donations.
+   Admins can delete unnecessary donations or manage donation records (for both funds and stationery items).
+
+3. Frontend (React):
+   React Components: The project utilizes modular React components for different features.
+   Components for forms, donation lists, and admin interfaces are used for better structure.
+
+4. React Hooks: Hooks like useState, useRef, and useEffect have been used extensively to manage state, access DOM elements,
+   and perform side effects. React Router is used to manage the navigation between different pages, such as the donation 
+   forms and the admin dashboard.
+
+5. Routing: The project leverages React Router for client-side routing, enabling seamless transitions between different 
+   sections such as donation forms, confirmation pages, and the admin dashboard. 
+      
+6. Backend (Spring Boot):
+   REST API: The backend is powered by Spring Boot, exposing RESTful endpoints for interacting with the frontend.
+   All data exchanges between the frontend and backend occur through standardized REST APIs, making it scalable and secure.
+   
+7. Layered Architecture: The backend follows an industry-standard layered architecture, separating concerns across:
+    Controllers: For handling API requests and responses.
+    Services: For business logic implementation.
+    DAOs (Data Access Objects): For managing interactions with the database.
+    Models: Representing the data structures used throughout the application.
+    Interfaces: Used for defining service and repository contracts.
+    Database: The backend interacts with a database (such as MongoDB) to store and manage donation records.
+    CORS Configuration: Cross-Origin Resource Sharing (CORS) is configured using a WebConfig class to allow communication between the React frontend and Spring Boot backend hosted on different origins (e.g., localhost ports).
+    
+
+                                                                       
