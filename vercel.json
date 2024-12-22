@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "eyefundreact/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "eyefundreact/build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "eyefundreact/build/index.html"
+    }
+  ]
+}
