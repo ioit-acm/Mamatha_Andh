@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ClothDonation from './ClothDonation';
@@ -20,7 +21,7 @@ export const AllAdminRoutes =({ compo })=> {
 
       navigate('/login'); 
     }
-  }, []); 
+  }, [navigate]); 
 
   const handleLogout = () => {
     setToken(null);

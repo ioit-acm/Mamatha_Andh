@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderSectionFinal from "./HeaderSectionFinal";
-import ContactForm from "./ContactForm";
+//import ContactForm from "./ContactForm";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 

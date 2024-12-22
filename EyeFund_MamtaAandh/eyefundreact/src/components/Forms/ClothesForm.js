@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import HeaderSectionFinal from "../AllComponets/HeaderSectionFinal";
 import ContactForm from "../AllComponets/ContactForm";
 import Footer from "../AllComponets/Footer";
-import Thankyou from "../AllComponets/Thankyou";
+//import Thankyou from "../AllComponets/Thankyou";
 import { Navigate, useNavigate } from "react-router-dom";
 
 const ClothesForm = () => {
