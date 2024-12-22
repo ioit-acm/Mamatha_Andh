@@ -1,31 +1,42 @@
-name: Deploy React Frontend to GitHub Pages
+name: Deploy React App to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+    - name: Checkout Repository
+      uses: actions/checkout@v4
 
-      - name: Install and build
-        working-directory: /EyeFund_MamtaAandh/eyefundreact
-        run: |
-          npm install
-          npm run build
+    # Navigate to the React app directory
+    - name: Change to React App Directory
+      working-directory: EyeFund_MamtaAandh/eyefundreact
+      run: echo "In React app directory"
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: /EyeFund_MamtaAandh/eyefundreact/build
+    # Setup Node.js
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18.x
+
+    # Install dependencies
+    - name: Install Dependencies
+      working-directory: EyeFund_MamtaAandh/eyefundreact
+      run: npm install
+
+    # Build the project
+    - name: Build Project
+      working-directory: EyeFund_MamtaAandh/eyefundreact
+      run: npm run build
+
+    # Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages
+      working-directory: EyeFund_MamtaAandh/eyefundreact
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: EyeFund_MamtaAandh/eyefundreact/build
