@@ -35,8 +35,8 @@ jobs:
 
     # Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
+      run: |
+        npx gh-pages -d build
       working-directory: EyeFund_MamtaAandh/eyefundreact
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: EyeFund_MamtaAandh/eyefundreact/build
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
